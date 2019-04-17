@@ -22,7 +22,7 @@ public abstract class MyDataBase extends RoomDatabase {
             myDataBase= Room.databaseBuilder(context.getApplicationContext(),
                     MyDataBase.class, "Meals-DataBase")
                     .fallbackToDestructiveMigration()
-                    //.allowMainThreadQueries() //this will allow us do the database calls in the main thread, but it is not a good practice
+                    .allowMainThreadQueries() //this will allow us do the database calls in the main thread, but it is not a good practice
                     .build();
 
         }
