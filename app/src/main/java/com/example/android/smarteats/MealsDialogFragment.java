@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 public class MealsDialogFragment extends DialogFragment {
 
+    String mUserName;
+    String mDescreption;
+
 
 
     public MealsDialogFragment() {
@@ -19,10 +22,26 @@ public class MealsDialogFragment extends DialogFragment {
 
     View view;
 
+    public void setmUserName(String mUserName) {
+        this.mUserName = mUserName;
+    }
+
+    public void setmDescreption(String mDescreption) {
+        this.mDescreption = mDescreption;
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.dialog_meal_item, container,false);
+        view = inflater.inflate(R.layout.dialog_meal_item,
+                container,false);
+
+        TextView nameTextView = view.findViewById(R.id.name);
+        nameTextView.setText(mUserName);
+        TextView descTextView = view.findViewById(R.id.desc);
+        descTextView.setText(mDescreption);
+
+
 
 
 

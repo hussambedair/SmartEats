@@ -56,6 +56,8 @@ public class ProfileActivity extends BaseActivity {
             public void onItemClick(int pos, Response meal) {
 
                 MealsDialogFragment mealsDialogFragment =new MealsDialogFragment();
+                mealsDialogFragment.setmUserName(meal.getName());
+                mealsDialogFragment.setmDescreption(meal.getDescription());
                 mealsDialogFragment.show(getSupportFragmentManager(), "meal");
 
             }
