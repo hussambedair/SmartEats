@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DD2727</color>
+    <color name="colorPrimaryDark">#DD2727</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="saveColor">#29A01B</color>
+    <color name="cancelColor">#DD2727</color>
+</resources>
